@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "College Fest Token System",
   description: "Automated student registration and validation system with QR codes",
+    generator: 'v0.dev'
 }
 
 export default function RootLayout({

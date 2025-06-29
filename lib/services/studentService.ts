@@ -95,6 +95,14 @@ export class StudentService {
       { returnDocument: "after" },
     )
 
+    // Check if update was successful
+    if (!updatedStudent || !updatedStudent.value) {
+      return {
+        success: false,
+        message: "Failed to update student validation status",
+      }
+    }
+
     // Record the validation scan
     await scansCollection.insertOne({
       studentId,
@@ -104,7 +112,7 @@ export class StudentService {
 
     return {
       success: true,
-      student: updatedStudent.value!,
+      student: updatedStudent.value,
       message: "Student validated successfully!",
     }
   }
