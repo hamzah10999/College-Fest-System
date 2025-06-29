@@ -1,4 +1,4 @@
-# College Fest Token System with MongoDB
+# Automated Token System with MongoDB
 
 This is an automated token system for college fests built with Next.js, React, and MongoDB.
 
